@@ -1,2 +1,2 @@
-x = 5
-print(x)
+result = 2 + 3 * 4 - 5 / 2
+print(result)
