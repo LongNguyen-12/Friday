@@ -1,0 +1,58 @@
+class SchoolSystem:
+    def __init__(self):
+        self.students = []
+        self.lecturers = []
+        self.projects = []
+    
+    def add_student(self, student):
+        if len(self.students) < 10:
+            self.students.append(student)
+        else:
+            print("Cannot add more than 10 students.")
+    
+    def add_lecturer(self, lecturer):
+        if len(self.lecturers) < 10:
+            self.lecturers.append(lecturer)
+        else:
+            print("Cannot add more than 10 lecturers.")
+    
+    def add_project(self, project):
+        if len(self.projects) < 10:
+            self.projects.append(project)
+        else:
+            print("Cannot add more than 10 projects.")
+    
+    def list_students(self):
+        return self.students
+    
+    def list_lecturers(self):
+        return self.lecturers
+    
+    def list_projects(self):
+        return self.projects
+class Student:
+    def __init__(self, name):
+        self.name = name
+
+class Lecturer:
+    def __init__(self, name):
+        self.name = name
+
+class Project:
+    def __init__(self, title):
+        self.title = title
+school_system = SchoolSystem()
+
+student1 = Student("Alice")
+student2 = Student("Bob")
+lecturer1 = Lecturer("Dr. Smith")
+project1 = Project("Mathematics")
+
+school_system.add_student(student1)
+school_system.add_student(student2)
+school_system.add_lecturer(lecturer1)
+school_system.add_project(project1)
+
+print([student.name for student in school_system.list_students()])  
+print([lecturer.name for lecturer in school_system.list_lecturers()])  
+print([project.title for project in school_system.list_projects()])  
