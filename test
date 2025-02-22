@@ -1,15 +1,1 @@
-class PartTimeStudent:
-    count=0
-    def __init__ (self, first_name, last_name, student_id):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.student_id = student_id
-        PartTimeStudent.count += 1
-    @staticmethod
-    def get_count():
-        return PartTimeStudent.count
-    
-student1= PartTimeStudent('Sam','Peter', '0001')
-student2= PartTimeStudent('Tim','Kazt','0002')
-    
-print(PartTimeStudent.get_count())
+import tkinter as tk    
